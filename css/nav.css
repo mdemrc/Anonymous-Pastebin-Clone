@@ -1,0 +1,17 @@
+/* Navigation styles */
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.7;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nav-link.active {
+    color: var(--primary);
+    opacity: 1;
+}

@@ -1,0 +1,333 @@
+/* Banner styles */
+.banner-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+    flex-wrap: wrap;
+    gap: 8px;
+    /* Увеличиваем отступ между баннерами */
+}
+
+.banner {
+    border-radius: 0;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 !important;
+    /* Убираем отступы через margin */
+    padding: 0;
+    /* Убираем внутренние отступы */
+    width: 440px;
+    /* Фиксированная ширина */
+    height: 111px;
+    /* Фиксированная высота */
+}
+
+.banner:hover {
+    transform: scale(1.02);
+    /* Уменьшаем эффект увеличения при наведении */
+}
+
+.banner img {
+    width: 100%;
+    /* Заполняем всю ширину контейнера */
+    height: 100%;
+    /* Заполняем всю высоту контейнера */
+    object-fit: cover;
+    /* Масштабируем изображение, чтобы заполнить контейнер */
+    display: block;
+}
+
+/* Banner text styles */
+.banner-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin: 4px 0 20px 0;
+    width: 100%;
+    max-width: 100vw;
+}
+
+.banner-text {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.banner-text a {
+    color: #00ff9d;
+    text-decoration: none;
+    font-weight: 900 !important;
+    font-size: 18px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.banner-text a:hover {
+    text-decoration: underline;
+}
+
+/* FORCE ALL banner text elements to be bold - OVERRIDE ANY CUSTOM STYLES */
+.banner-text-container * {
+    font-weight: 900 !important;
+    font-family: 'Source Code Pro', monospace !important;
+}
+
+/* Override all possible banner text selectors */
+.banner-text-container .banner-text * {
+    font-weight: 900 !important;
+}
+
+.banner-text-container span,
+.banner-text-container a,
+.banner-text-container div,
+.banner-text-container p {
+    font-weight: 900 !important;
+    font-family: 'Source Code Pro', monospace !important;
+}
+
+/* Force override even inline styles and custom classes */
+.banner-text-container [class*="gradient"] {
+    font-weight: 900 !important;
+}
+
+.banner-text-container [style] {
+    font-weight: 900 !important;
+}
+
+/* ULTIMATE FORCE - Override everything related to banner text */
+.banner-text-container .banner-text span[class],
+.banner-text-container .banner-text span[style],
+.banner-text-container .banner-text a[class],
+.banner-text-container .banner-text a[style] {
+    font-weight: 900 !important;
+    font-family: 'Source Code Pro', monospace !important;
+}
+
+/* NUCLEAR OPTION - FORCE EVERY POSSIBLE BANNER TEXT ELEMENT */
+body .banner-text-container *,
+body .banner-text *,
+body div[class*="banner"] *,
+body span[class*="gradient"] {
+    font-weight: 900 !important;
+    font-family: 'Source Code Pro', monospace !important;
+}
+
+/* Target ANY text that might be a banner/ad */
+body [class*="banner-text"] *,
+body [id*="banner"] *,
+body [class*="ad-text"] *,
+body [class*="adtext"] * {
+    font-weight: 900 !important;
+    font-family: 'Source Code Pro', monospace !important;
+}
+
+/* Override ANY inline styles on banner elements */
+body .banner-text-container [style*="font"],
+body .banner-text [style*="font"],
+body .banner-text-container [style*="weight"] {
+    font-weight: 900 !important;
+    font-family: 'Source Code Pro', monospace !important;
+}
+
+/* Banner text gradient classes */
+.default-gradient-1 {
+    background-image: linear-gradient(to right, #ff0000, #ff3366, #ff66cc, #ff99ff, #ff66cc, #ff3366, #ff0000);
+    background-size: 200% auto;
+    animation: shine 2s linear infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.default-gradient-2 {
+    background-image: linear-gradient(to right, #00ffff, #00bfff, #0080ff, #8a2be2, #ff00ff);
+    background-size: 200% auto;
+    animation: shine 2s linear infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Banner text font weight - ALL text banners bold */
+.banner-text .font-bold {
+    font-weight: 900 !important;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.banner-text span {
+    font-weight: 900 !important;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.banner-text a {
+    font-weight: 900 !important;
+    font-family: 'Source Code Pro', monospace;
+}
+
+/* Message styles */
+.success-message {
+    background-color: rgba(0, 255, 157, 0.1);
+    border: 1px solid rgba(0, 255, 157, 0.2);
+    color: #00ff9d;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+.error-message {
+    background-color: rgba(255, 0, 76, 0.1);
+    border: 1px solid rgba(255, 0, 76, 0.2);
+    color: #ff004c;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+/* Form styles */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="color"],
+select,
+textarea {
+    background: #151529;
+    border: 1px solid rgba(0, 255, 157, 0.5);
+    color: #fff;
+    transition: border-color 0.3s ease;
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="color"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #00ff9d;
+    outline: none;
+}
+
+button[type="submit"] {
+    background: #00ff9d;
+    color: #000;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+    border-radius: 4px;
+    padding: 8px 24px;
+    cursor: pointer;
+    border: none;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+/* Common colors */
+:root {
+    --primary: #00ff9d;
+    --primary-hover: #32ffb6;
+    --background: #151529;
+    --background-secondary: #1d1e3a;
+    --text-color: #ffffff;
+}
+
+/* Unified pagination component */
+.pagination-wrapper {
+    display: inline-flex;
+    background: transparent;
+    border-radius: 8px;
+    overflow: visible;
+    font-family: 'Source Code Pro', monospace;
+    gap: 8px;
+}
+
+.pagination-wrapper a,
+.pagination-wrapper span.page-ellipsis,
+.pagination-wrapper span.page-prev,
+.pagination-wrapper span.page-next {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    padding: 8px 14px 8px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    background: #1d1e3a;
+    border-radius: 6px;
+    transition: background .18s ease, color .18s ease;
+}
+
+.pagination-wrapper a.page-prev,
+.pagination-wrapper a.page-next {
+    padding: 8px 16px;
+    min-width: auto;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.pagination-wrapper a.page-prev {
+    margin-left: 0;
+}
+
+.pagination-wrapper a.page-next {
+    margin-right: 0;
+}
+
+.pagination-wrapper span.page-prev.disabled,
+.pagination-wrapper span.page-next.disabled {
+    color: #555;
+    cursor: not-allowed;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.pagination-wrapper span.page-prev.disabled {
+    margin-left: 0;
+}
+
+.pagination-wrapper span.page-next.disabled {
+    margin-right: 0;
+}
+
+.pagination-wrapper a:not(.active):hover {
+    background: #242642;
+}
+
+.pagination-wrapper a.active {
+    background: var(--primary);
+    color: #000;
+    font-weight: 700;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0 24px;
+}
+
+/* Compact variant for tight spaces */
+.pagination-wrapper.compact a {
+    min-width: 34px;
+    padding: 6px 10px;
+    font-size: 13px;
+}

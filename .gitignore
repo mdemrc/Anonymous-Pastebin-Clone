@@ -1,0 +1,8 @@
+vendor/
+composer.phar
+.env
+*.log
+database/*.sql
+sql_scheme/*.sql
+logs/
+.user.ini

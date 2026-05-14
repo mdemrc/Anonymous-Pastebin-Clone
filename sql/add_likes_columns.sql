@@ -1,0 +1,3 @@
+ALTER TABLE pastes
+ADD COLUMN likes_up INT DEFAULT 0,
+ADD COLUMN likes_down INT DEFAULT 0;

@@ -1,0 +1,318 @@
+@media screen and (max-width: 1400px) {
+    .wrapper form textarea,
+    .CodeMirror,
+    .tabs {
+        width: 750px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .wrapper form textarea,
+    .CodeMirror,
+    .tabs {
+        width: 650px;
+    }
+
+    .profilepastelist, .tabs {
+        width: 700px !important;
+    }
+
+    .paste-info,
+    hr {
+        min-width: 300px;
+    }
+
+    .wrapper form .form-elements {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .wrapper form textarea,
+    .CodeMirror {
+        width: 600px;
+    }
+
+    .paste-info,
+    hr {
+        min-width: 250px;
+    }
+
+    .wrapper form .form-elements {
+        width: 250px;
+    }
+
+    .pastelist,
+    .banners,
+    .tabs {
+        width: 900px;
+    }
+
+    .profilepastelist, .tabs {
+        width: 600px !important;
+    }
+
+    .dashattributes {
+        width: 31vw !important;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .wrapper form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .CodeMirror {
+        margin: 0px 0px 30px 0px;
+    }
+
+    .wrapper form .form-elements {
+        margin: 0px 0px 30px 0px;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .wrapper form .form-elements .form-element,
+    .wrapper form .form-elements .pbutton {
+        width: 350px;
+        flex: none;
+    }
+
+    .editprofile .form-element {
+        width: auto !important;
+    }
+
+    .ratings,
+    .paste-info {
+        flex: none;
+    }
+
+    .pastelist,
+    .banners,
+    .wrapper form textarea,
+    .CodeMirror,
+    .wrapper form .form-elements,
+    .tabs {
+        width: 800px;
+    }
+
+    .profilepastelist, .tabs {
+        width: 550px !important;
+    }
+
+    .profileattributes {
+        width: 300px;
+    }
+
+    .pasteattributes {
+        margin: 0px 0px 15px 0px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .pastelist,
+    .banners,
+    .wrapper form textarea,
+    .CodeMirror,
+    .wrapper form .form-elements,
+    .tabs {
+        width: 700px;
+    }
+
+    .profilepastelist, .tabs {
+        width: 500px !important;
+    }
+    .profileattributes {
+        width: 275px;
+    }
+
+    .dashattributes {
+        width: 400px !important;
+        margin: 10px 0px;
+    }
+
+    .dashsplit {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .pastelist,
+    .banners,
+    .wrapper form textarea,
+    .CodeMirror,
+    .wrapper form .form-elements,
+    .tabs {
+        width: 600px;
+    }
+
+    .profilesplit {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profilepastelist, .tabs {
+        width: 650px !important;        
+    }
+
+    .profilepastelist, .tabs {
+        margin: 5px 0px 5px 0px !important;
+    }
+
+    .profileattributes {
+        width: 400px;
+        margin: 10px 0px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .header {
+        padding: 9px 0px 9px 0px;
+    }
+
+    .pastelist th,
+    .pastelist td {
+        max-width: 170px;
+    }
+
+    .pastelist,
+    .banners,
+    .wrapper form textarea,
+    .CodeMirror,
+    .wrapper form .form-elements,
+    .tabs {
+        width: 500px;
+    }
+
+    .profilepastelist, .tabs {
+        width: 500px !important;
+    }
+
+    .profileattributes {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pastelist th,
+    .pastelist td {
+        max-width: 150px;
+    }
+
+    .pastelist,
+    .banners,
+    .wrapper form textarea,
+    .CodeMirror,
+    .wrapper form .form-elements,
+    .tabs {
+        width: 400px;
+    }
+
+    .profilepastelist, .tabs {
+        width: 400px !important;
+    }
+
+    .profileattributes {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        height: fit-content;
+    }
+
+    .header h3 {
+        margin: 5px 12px 5px 12px;
+    }
+
+    .pastelist th,
+    .pastelist td {
+        max-width: 130px;
+    }
+
+    .pastelist,
+    .banners,
+    .wrapper form textarea,
+    .CodeMirror,
+    .wrapper form .form-elements,
+    .tabs {
+        width: 300px;
+    }
+
+    .profilepastelist, .tabs {
+        width: 300px !important;
+    }
+
+    .profileattributes {
+        width: 250px;
+    }
+
+    .wrapper form .form-elements .form-element,
+    .wrapper form .form-elements .pbutton {
+        width: 300px;
+    }
+
+    .paste-about {
+        grid-template-columns: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .pastelist th,
+    .pastelist td {
+        max-width: 110px;
+    }
+
+    .pastelist,
+    .banners,
+    .wrapper form textarea,
+    .CodeMirror,
+    .wrapper form .form-elements,
+    .tabs {
+        width: 250px;
+    }
+
+    .profilepastelist, .tabs {
+        width: 250px !important;
+    }
+
+    .profileattributes {
+        width: 200px;
+    }
+
+    .wrapper form .form-elements .form-element,
+    .wrapper form .form-elements .pbutton {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .pastelist th,
+    .pastelist td {
+        max-width: 90px;
+    }
+
+    .pastelist,
+    .banners,
+    .wrapper form textarea,
+    .CodeMirror,
+    .wrapper form .form-elements,
+    .tabs {
+        width: 200px;
+    }
+
+    .profilepastelist, .tabs {
+        width: 200px !important;
+    }
+
+    .profileattributes {
+        width: 150px;
+    }
+
+    .wrapper form .form-elements .form-element,
+    .wrapper form .form-elements .pbutton {
+        width: 200px;
+    }
+}

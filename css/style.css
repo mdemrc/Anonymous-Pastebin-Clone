@@ -1,0 +1,870 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Import fonts.css */
+@import url('fonts.css');
+
+/* Анимация для бриллиантового градиента */
+@keyframes shine {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.diamond_rank_pto {
+    color: #00cec9;
+    background: url(https://patched.to/images/sparkles.gif);
+    text-shadow: 0px 0px 4px #00bcd4;
+}
+.glory_rank_pto {
+    color: #FF006C;
+    background: url(https://patched.to/images/sparkles.gif); 
+    text-shadow: 0px 0px 4px;
+}
+.legendary_rank_pto {
+    color: #f39c12; 
+    background: url(https://patched.to/images/sparkles.gif); 
+    text-shadow: 0px 0px 4px #fabc00;
+}
+.nova_rank_pto {
+    color: #fd9644;
+}
+.vip_rank_pto {
+    color: #E44A9C;
+}
+.royal_rank_pto {
+    color: #74b9ff;
+}
+.cont_rank_pto {
+    color: #f1c40f;
+}
+/* Стиль для радужного текста */
+.rainbow-text {
+    animation: rainbow 6s linear infinite;
+}
+
+/* General Stuff*/
+:root {
+    --primary: #00f784;
+    --primary-hover: #32ffb6;
+    --background: #151529;
+    --background-2: #191935;
+    --background-textarea: #1d1e3a;
+    --text-color: #ffffff;
+    --text-color-hover: #d0d0d0;
+    --glow: 0px;
+    --transition-time: 0.3s;
+}
+
+body {
+    background-color: var(--background);
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    transition: 0;
+}
+
+.header *,
+.wrapper form .form-elements *,
+.slider * {
+    transition: var(--transition-time);
+}
+
+/* Header Style */
+
+.header {
+    background-color: var(--background-textarea);
+    font-family: var(--font-primary);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 0px 10px 0px;
+}
+
+.header h3 {
+    text-align: center;
+    min-width: fit-content;
+    margin: 0px 12px 0px 12px;
+}
+
+.header h1 {
+    font-weight: 1000;
+    font-family: var(--font-primary);
+    color: var(--text-color);
+}
+
+.header h1:hover {
+    color: var(--text-color-hover);
+}
+
+/* Banners */
+
+.banners {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 0px 0px 0px;
+}
+
+.banner {
+    margin: 0px 5px 0px 5px;
+}
+
+.banner img {
+    width: 480px;
+    height: 120px;
+}
+
+/* Body Style */
+
+.ratings {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.currentrating {
+    text-align: center;
+    flex: 1;
+    font-size: 30px;
+    font-family: var(--font-primary);
+    color: var(--text-color);
+}
+
+.ratebutton {
+    flex: 1;
+    background: none !important;
+    width: fit-content !important;
+    min-width: 50px !important;
+}
+
+.ratebutton img {
+    width: 40px;
+    height: 40px;
+}
+
+.settingsform {
+    justify-content: center;
+    align-items: center;
+}
+
+.paste-about {
+    margin: 25px 5px 10px 5px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.paste-info {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+    flex: 1;
+}
+
+.paste-about .paste-info {
+    display: flex !important;
+    min-width: 0px !important;
+    width: auto !important;
+    flex-direction: row;
+    align-items: center;
+    
+    border-color: transparent;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+
+    margin: 4px 0px;
+
+    box-shadow: 0px 0px 5px var(--background);
+
+    padding: 5px 4px;
+}
+
+.paste-about .paste-info i {
+    font-size: 22px;
+    margin: 0px 5px 0px 5px;
+}
+
+.paste-about div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-value {
+    margin: 5px 0px 5px 0px;
+}
+
+.larger {
+    font-size: 21px;
+}
+.large-ui::after {
+    height: 20px !important;
+    width: 20px !important;
+}
+
+.paste-info i {
+    color: var(--primary);
+}
+
+hr {
+    border-top: 1px solid var(--primary);
+    min-width: 400px;
+    flex: 1;
+    margin: 5px 0px 5px 0px;
+}
+
+.form-elements hr {
+    min-width: 300px;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pagetitle {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+.wrapper form {
+    margin: 30px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.wrapper form .form-elements {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 25px 20px 0px;
+}
+
+.wrapper form .form-elements .form-element {
+    background-color: var(--background-textarea);
+    font-size: 15.5px;
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    height: 40px;
+    min-height: 40px;
+    min-width: 200px;
+    padding: 0px 0px 0px 10px;
+    margin: 10px 5px 10px 5px;
+    flex: 1;
+    border-color: transparent;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    outline: none;
+}
+
+.wrapper form .form-elements .form-element::placeholder {
+    color: var(--text-color-hover);
+}
+
+.wrapper form textarea,
+.CodeMirror {
+    cursor: text;
+    box-shadow: 0 0 var(--glow) var(--primary);
+    font-size: 15.5px;
+    font-family: var(--font-primary);
+    background-color: var(--background-textarea);
+    color: var(--text-color);
+    resize: none;
+    width: 950px;
+    height: 500px !important;
+    margin: 0px 0px 25px 25px;
+    padding: 10px 5px 10px 5px;
+    border-color: transparent;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.CodeMirror:focus,
+.wrapper form textarea:focus {
+    outline: 0;
+}
+
+.wrapper form .form-elements .pbutton {
+    cursor: pointer;
+    min-width: 200px;
+    flex: 1;
+    margin: 10px 5px 10px 5px;
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var(--font-primary);
+    background-color: var(--primary);
+    color: var(--text-color);
+    border-color: transparent;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.wrapper form .form-elements .pbutton:hover {
+    background-color: var(--primary-hover);
+}
+/* CodeMirror Editor Styles */
+.CodeMirror { 
+    font-family: monospace !important;
+    font-size: 16px !important;
+    background: #1d1e3a !important; 
+    color: #fff !important;
+    padding: 10px !important;
+    height: 524px !important;
+    width: 964px !important;
+    border-radius: 8px !important;
+}
+
+/* CodeMirror Gutters */
+.CodeMirror-gutters {
+    background: inherit !important;
+    border-right: 0px !important;
+    display: block !important;
+    width: auto !important;
+    padding-right: 10px !important;
+}
+
+/* CodeMirror Line Numbers */
+.CodeMirror-linenumber {
+    font-family: monospace !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    text-align: right !important;
+    min-width: 32px !important; /* Ensures proper alignment */
+    padding: 0 6px 0 0 !important; /* Adjust spacing */
+    color: #999 !important;
+    white-space: nowrap !important;
+    background: inherit !important;
+}
+
+
+
+.footer {
+    background-color: var(--background-textarea);
+    font-family: var(--font-primary);
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0px 0px 0px;
+    padding: 10px 0px;
+}
+
+.footer h3 {
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.version {
+    color: var(--text-color-hover);
+    font-size: 12px;
+}
+
+/* Private paste styles */
+.private-paste {
+    border-left: 3px solid var(--primary);
+    padding-left: 10px;
+}
+
+.metadata {
+    font-size: 12px;
+    color: var(--text-color-hover);
+    margin-top: 5px;
+}
+
+/* Username Styles on reqeusts of ONEMILI by @AustinnXD */
+.lrefunder {
+    background: url(https://web.archive.org/web/20220205011522im_/https://static.cracked.to/images/onyx-bg.gif);
+    text-shadow: 0.5px 0.5px 5px;
+    -webkit-animation: hueanim 10s infinite linear;
+    color: #0FF;
+    font-weight: bold
+}
+
+.floraiN {
+    background: linear-gradient(90deg,#1ff3fb 0,#37ef40 100%,#fff);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    text-shadow: 0 0 5px #16e695
+}
+
+.CEO_rank {
+    color: #ffffff;
+    text-shadow: 1px 1px 10px #ffffff;
+}
+
+.onemili {
+    -webkit-background-clip: text !important;
+    text-shadow: 0 0 5px #c8378d;
+    background: linear-gradient(to right, #7a00ff, #ff0000, #00ff15);
+    -webkit-text-fill-color: transparent;
+    color: #FF512F;
+    font-weight: 700;
+}
+
+.dreams {
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    text-shadow: 0 0 5px #4e1336;
+    background-image: url(https://web.archive.org/web/20220205011522im_/https://static.cracked.to/images/bg1.gif),linear-gradient(90deg,#ed0d0d 0,#590e4b 100%,#fff)
+}
+
+.heaven {
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    text-shadow: 0 0 5px #c8378d;
+    background-image: url(https://web.archive.org/web/20220205011522im_/https://static.cracked.to/images/bg1.gif),linear-gradient(90deg,#e4f918 0,#ed11ff 100%,#fff)
+}
+
+.contributor_rank,.features_tborder td.trow1:nth-child(6):before {
+    color: #FFDF00;
+    text-shadow: 0px 0px 3px #090909
+}
+
+.premium_rank,.features_tborder td.trow1:nth-child(4):before {
+    color: #4DD5D5;
+    text-shadow: 0px 0px 5px #090909
+}
+
+.features_tborder td.trow1:nth-child(2):before,.supreme_rank {
+    color: #54FF9F;
+    text-shadow: 1px 1px 10px #39c70d;
+    background-image: url(https://web.archive.org/web/20220205011522im_/https://static.cracked.to/images/bg1.gif)
+}
+
+.godlike_rank,.features_tborder td.trow1:nth-child(5):before {
+    background: url(https://web.archive.org/web/20220205011522im_/https://static.cracked.to/images/bg1.gif);
+    color: #CF2D9F;
+    text-shadow: 0px 0px 8px #77185B
+}
+
+.coder_rank {
+    color: #a868ed;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px #090909
+}
+
+.infinity_rank,.features_tborder td.trow1:nth-child(3):before {
+    color: #ff99b1;
+    text-shadow: 0px 0px 5px #ff85a2
+}
+
+.shine_rank {
+    text-shadow: 0px 0px 3px #0e0101;
+    color: #8f55dc;
+    font-weight: bold;
+    border-bottom: 1px dotted
+}
+
+.dev_rank {
+    color: #c61aff;
+    text-shadow: 0px 0px 5px #090909;
+    font-weight: bold
+}
+
+.reverser_rank {
+    background: url(https://web.archive.org/web/20220205011522im_/https://static.cracked.to/images/bg1.gif);
+    color: #8ed7d4;
+    border-bottom: 1px dotted
+}
+
+.section_mod_rank {
+    color: #26f6a5;
+    text-shadow: 1px 1px 3px #000
+}
+
+.admin_rank {
+    text-shadow: 0px 0px 5px #0c0c0c;
+    color: #D8185C;
+    font-weight: bold;
+    border-bottom: 1px dashed
+}
+
+.heaven_rank {
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    text-shadow: 0 0 5px #c8378d;
+    background-image: url(https://web.archive.org/web/20220205011522im_/https://static.cracked.to/images/bg1.gif),linear-gradient(90deg,#e4f918 0,#ed11ff 100%,#fff);
+    -webkit-text-fill-color: transparent;
+    color: #FF512F;
+    font-weight: 700
+}
+
+.mods_rank {
+    color: #3b8ed6;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px #090909
+}
+
+.trial_mod_rank {
+    color: #028e6b;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px #090909
+}
+
+.retired_rank {
+    color: #80ea8d;
+    text-shadow: 0px 0px 5px #090909
+}
+
+.disinfector_rank {
+    text-shadow: 0px 0px 5px #0c0c0c;
+    color: #91abf6
+}
+
+.kings_rank_old {
+    color: #FFD700;
+    font-weight: bold;
+    text-shadow: 1px 1px 6px #F00;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    background-image: url(https://web.archive.org/web/20220205011522im_/https://i.postimg.cc/RqrRMH6N/ezgif-com-resize-17.gif)
+}
+
+.kings_rank:before {
+    background-image: url(https://web.archive.org/web/20220205011522im_/https://static.cracked.to/images/bg1.gif);
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 1
+}
+
+.kings_rank {
+    position: relative;
+    background: linear-gradient(178deg,#ffd700,#ff2a00,#ffd700);
+    background-size: 600% 600%;
+    font-weight: bold;
+    -webkit-animation: AnimationName 4s ease infinite;
+    -moz-animation: AnimationName 4s ease infinite;
+    animation: AnimationName 4s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1px dotted #ffd700
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 48% 0%;
+        border-bottom: 1px dotted #ff2a00
+    }
+
+    50% {
+        background-position: 53% 100%;
+        border-bottom: 1px dotted #ffd700
+    }
+
+    100% {
+        background-position: 48% 0%;
+        border-bottom: 1px dotted #ff2a00
+    }
+}
+
+.sparkles {
+    background: url(https://web.archive.org/web/20220205011522im_/https://static.cracked.to/images/bg1.gif)
+}
+
+@keyframes gradient-text {
+    0% {
+        background-position: 0% 50%
+    }
+
+    25% {
+        background-position: 100% 50%
+    }
+
+    50% {
+        background-position: 75% 25%
+    }
+
+    75% {
+        background-position: 25% 75%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+*/@keyframes glitch-effect {
+    0% {
+        clip: rect(25px,9999px,65px,0);
+        -webkit-filter: brightness(0.5);
+        filter: brightness(0.5)
+    }
+
+    5% {
+        clip: rect(41px,9999px,4px,0);
+        filter: brightness(0.5);
+        filter: brightness(0.5)
+    }
+
+    10% {
+        clip: rect(52px,9999px,15px,0);
+        filter: brightness(0.5);
+        filter: brightness(0.5)
+    }
+
+    40% {
+        clip: rect(12px,9999px,2px,0);
+        filter: brightness(0.5);
+        filter: brightness(0.5)
+    }
+
+    45% {
+        clip: rect(16px,9999px,71px,0);
+        filter: brightness(0.5);
+        filter: brightness(0.5)
+    }
+
+    100% {
+        clip: rect(92px,9999px,78px,0);
+        filter: brightness(0.5);
+        filter: brightness(0.5)
+    }
+}
+
+@keyframes hueanim {
+    from {
+        -webkit-filter: hue-rotate(0deg)
+    }
+
+    to {
+        -webkit-filter: hue-rotate(360deg)
+    }
+}
+
+.new_refunder {
+    background: url(https://web.archive.org/web/20220205011522im_/https://static.cracked.to/images/onyx-bg.gif);
+    position: relative;
+    margin: 0 auto;
+    color: #ffb100;
+    font-family: "Roboto",sans-serif;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.01em;
+    transform: scale3d(1,1,1);
+    text-shadow: 0.5px 0.5px 2px #ff8300;
+    border-bottom: 1px dotted;
+    -webkit-animation: hueanim 10s linear infinite
+}
+
+.new_refunder:before {
+    left: 7px;
+    text-shadow: 1px 0 #696969;
+    animation: glitch-effect 3s infinite linear alternate-reverse;
+    color: #ffc136
+}
+
+.new_refunder:after {
+    left: 3px;
+    text-shadow: -1px 0 #708090;
+    animation: glitch-effect 2s infinite linear alternate-reverse;
+    color: #ffc749
+}
+
+.new_refunder::before,.new_refunder::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    color: gold;
+    clip: rect(0,900px,0,0)
+}
+
+.rainbow_name {
+    background-image: url(https://web.archive.org/web/20220205011522im_/https://static.cracked.to/images/onyx-bg.gif);
+    color: red;
+    text-shadow: 0 0 5px red
+}
+
+@keyframes mellowanimation {
+    from {
+        filter: hue-rotate(-360deg)
+    }
+
+    to {
+        filter: hue-rotate(360deg)
+    }
+}
+
+.mellowanimation > * {
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #FF512F;
+    font-weight: 700;
+    text-shadow: 0px 0px 5px #727309;
+    background-image: linear-gradient(90deg,#f00 0%,#29ff00 100%,#fff);
+    animation: mellowanimation 5s infinite linear
+}
+
+.mellowanimation {
+    background-image: url(https://web.archive.org/web/20220205011522im_/https://static.cracked.to/images/bg1.gif)
+}
+
+.mod_rank {
+    color: #3b8ed6;
+    text-shadow: 0px 0px 5px #090909
+}
+
+.new_refunder_placeholder {
+    background: linear-gradient(45deg,rgba(255,255,255,1) 2%,rgba(255,255,255,1) 25%,rgba(248,1,1,1) 35%,rgba(248,1,1,1) 65%,rgba(255,255,255,1) 75%,rgba(255,255,255,1) 100%);
+    animation: anim 5s ease-in-out infinite;
+    text-shadow: 0px 0px 6px #f21e1ea3;
+    color: #fff;
+    font-weight: bold;
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+@keyframes anim {
+    0% {
+        background-position: 0 0
+    }
+
+    50% {
+        background-position: 100% 100%
+    }
+
+    100% {
+        background-position: 0 0
+    }
+}
+
+/* .onemili_ug {
+    font-weight: bold;
+    background-position: .2em -.07em !important;
+    !i;!;position: relative;
+    text-shadow: 0px 0 1em #56a15e;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text,border-box,text;
+    background-image: url(https://i.imgur.com/tDkmDXm.gif), url(https://i.imgur.com/1jpPYQG.gif), linear-gradient(90deg, rgb(255 255 255) 0%, rgb(0 255 104) 25%, rgb(255 255 255) 51%, rgb(255 255 255) 75%, rgb(255 249 249) 100%);
+    background-size: 3em,5em,15em;
+    animation: onemili_ug-anim 16s linear infinite;
+}
+
+@keyframes onemili_ug-anim {
+    0% {
+        background-position: 0 0,0%,-40em 0
+    }
+
+    100% {
+        background-position: 0 0,0%,40em 0
+    }
+}
+
+.onemili_ug:before {
+    background-image: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHhpaG5zdzBieHVuaTVycW84ZnR5NXloajZuaHo5OWp5dmVhbGhoMCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/HQp9pMIlKV6zQiBlBi/giphy.webp);
+    background-size: 102%;
+    position: absolute;
+    width: 46px;
+    z-index: 6;
+    height: 25px;
+    left: 1rem;
+    transform: rotate(0deg) translateY(-50%);
+    content: '';
+} */
+
+.onemili_ug {
+    font-weight: bold;
+    position: relative;
+    background-position: .2em -.07em;
+    text-shadow: 0 0 1em rgb(201 179 179 / 63%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text, border-box, text;
+    background-image: 
+        url(https://i.imgur.com/tDkmDXm.gif), 
+        url(https://i.imgur.com/1jpPYQG.gif), 
+        linear-gradient(90deg, #c53030, #2f855a); /* Only red and green */
+    background-size: 3em, 5em, 15em;
+    background-position: 0 0, 0 0, 0 0;
+    /* Two animations: moving background layers and a gentle floating text effect */
+    /*animation: onemili_ug-anim 16s linear infinite, */
+    /*           textFloat 5s infinite ease-in-out;*/
+}
+
+/* Animate background layers (including the money-inspired gradient) to create a dynamic flow */
+@keyframes onemili_ug-anim {
+    0% {
+        background-position: 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: 0 0, 100% 0, 40em 0;
+    }
+}
+
+/* A gentle floating animation for a randomized text movement effect */
+@keyframes textFloat {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(2px, -2px); }
+    50%  { transform: translate(-2px, 2px); }
+    75%  { transform: translate(1px, -1px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Adjust the pseudo-element to mimic a money emblem or red ribbon */
+.onemili_ug:before {
+    background-image: url();
+    background-size: 102%;
+    position: absolute;
+    width: 46px;
+    height: 25px;
+    left: 0rem;
+    z-index: 6;
+    transform: rotate(0deg) translateY(-50%);
+    content: '';
+}
+

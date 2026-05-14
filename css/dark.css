@@ -1,0 +1,428 @@
+/*
+* Темная тема для paste.to
+* Основана на стиле paste.fo
+*/
+
+:root {
+    --primary: #00ff9d;
+    --primary-hover: #32ffb6;
+    --background: #151726;
+    --background-2: #191935;
+    --background-textarea: #1d1e3a;
+    --text-color: #ffffff;
+    --text-color-hover: #d0d0d0;
+}
+
+/* Стили для SweetAlert2 */
+.swal2-popup {
+  background: var(--background-2);
+  color: var(--text-color);
+}
+
+.swal2-title, .swal2-content {
+  color: var(--text-color);
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+.swal2-styled.swal2-confirm:hover {
+  background-color: var(--primary-hover);
+}
+
+.swal2-styled.swal2-cancel {
+  background-color: var(--background-textarea);
+  color: var(--text-color);
+}
+
+.swal2-styled.swal2-cancel:hover {
+  background-color: #2d2e4a;
+}
+
+/* Стили для CodeMirror */
+.CodeMirror {
+  background-color: var(--background-textarea) !important;
+  color: var(--text-color) !important;
+}
+
+.CodeMirror-gutters {
+  border-right: 0px solid var(--background) !important;
+}
+
+.CodeMirror-linenumber {
+  color: var(--text-color-hover) !important;
+}
+
+.CodeMirror-cursor {
+  border-left: 1px solid var(--primary) !important;
+}
+
+.CodeMirror-selected {
+  background-color: rgba(0, 247, 132, 0.2) !important;
+}
+
+/* Стили для приватных паст */
+.private-paste {
+  border-left: 3px solid var(--primary);
+  padding-left: 10px;
+}
+
+/* Стили для кнопок */
+button, input[type="submit"] {
+  background-color: var(--background-textarea);
+  color: var(--text-color);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: var(--font);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+/* Стили для ссылок (кроме навигации) */
+a:not(.nav-link) {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:not(.nav-link):hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+
+/* Стили для таблиц */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--background-2);
+}
+
+th {
+  background-color: var(--background-textarea);
+  color: var(--primary);
+}
+
+tr:hover {
+  background-color: var(--background-2);
+}
+
+/* Стили для форм */
+input, textarea, select {
+  background-color: var(--background-textarea);
+  color: var(--text-color);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: var(--font);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+/* Стили для сообщений */
+.message {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.message.success {
+  background-color: rgba(0, 255, 157, 0.2);
+  border-left: 3px solid var(--primary);
+}
+
+.message.error {
+  background-color: rgba(255, 0, 0, 0.2);
+  border-left: 3px solid #ff0000;
+}
+
+.message.info {
+  background-color: rgba(0, 123, 255, 0.2);
+  border-left: 3px solid #007bff;
+}
+
+/* Стили для подсветки синтаксиса */
+.hljs {
+    background: #1E1E1E !important;
+    color: #D4D4D4;
+}
+
+.hljs-keyword {
+    color: #569CD6;
+}
+
+.hljs-string {
+    color: #CE9178;
+}
+
+.hljs-comment {
+    color: #6A9955;
+}
+
+.hljs-function {
+    color: #DCDCAA;
+}
+
+.hljs-number {
+    color: #B5CEA8;
+}
+
+.hljs-class {
+    color: #4EC9B0;
+}
+
+.hljs-variable {
+    color: #9CDCFE;
+}
+
+.hljs-operator {
+    color: #D4D4D4;
+}
+
+.hljs-punctuation {
+    color: #D4D4D4;
+}
+
+.hljs-property {
+    color: #9CDCFE;
+}
+
+.hljs-title {
+    color: #DCDCAA;
+}
+
+.hljs-params {
+    color: #9CDCFE;
+}
+
+.hljs-built_in {
+    color: #4EC9B0;
+}
+
+/* Стилизация скроллбара */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1E1E1E;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 157, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 157, 0.5);
+}
+
+/* Стили для кнопок действий в view.php */
+.paste-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #1d1e3a;
+    border: 1px solid #00ff9d;
+    color: #00ff9d;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-button:hover {
+    background: #00ff9d;
+    color: #151529;
+}
+
+.action-button i {
+    font-size: 16px;
+}
+
+/* Стили для страницы просмотра пасты */
+.paste-info {
+    background: #151529;
+    border: 1px solid rgba(0, 255, 157, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-block {
+    padding: 16px;
+    background: rgba(29, 30, 58, 0.5);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.stat-block:hover {
+    background: rgba(29, 30, 58, 0.8);
+}
+
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    background: rgba(0, 255, 157, 0.1);
+    border: 1px solid #00ff9d;
+    color: #00ff9d;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-button:hover {
+    background: rgba(0, 255, 157, 0.2);
+}
+
+.action-button i {
+    font-size: 16px;
+}
+
+.paste-content {
+    background: #151529;
+    border: 1px solid rgba(0, 255, 157, 0.1);
+    overflow: auto;
+}
+
+.paste-content pre {
+    margin: 0;
+    padding: 0;
+}
+
+.paste-content code {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Стилизация скроллбара для блока с кодом */
+.paste-content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.paste-content::-webkit-scrollbar-track {
+    background: rgba(29, 30, 58, 0.5);
+    border-radius: 4px;
+}
+
+.paste-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 157, 0.3);
+    border-radius: 4px;
+}
+
+.paste-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 157, 0.5);
+}
+
+.like-button,
+.dislike-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(29, 30, 58, 0.5);
+    border: 1px solid rgba(0, 255, 157, 0.1);
+    color: #00ff9d;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.like-button:hover,
+.dislike-button:hover {
+    background: rgba(0, 255, 157, 0.1);
+}
+
+.dislike-button {
+    color: #ff004c;
+    border-color: rgba(255, 0, 76, 0.1);
+}
+
+.dislike-button:hover {
+    background: rgba(255, 0, 76, 0.1);
+}
+
+/* Анимация для уведомлений */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.diamond_rank_pto {
+    color: #00cec9 !important;
+    background: url(https://patched.to/images/sparkles.gif);
+    text-shadow: 0px 0px 4px #00bcd4;
+}
+.glory_rank_pto {
+    color: #FF006C !important;
+    background: url(https://patched.to/images/sparkles.gif); 
+    text-shadow: 0px 0px 4px;
+}
+.legendary_rank_pto {
+    color: #f39c12 !important; 
+    background: url(https://patched.to/images/sparkles.gif); 
+    text-shadow: 0px 0px 4px #fabc00;
+}
+.nova_rank_pto {
+    color: #fd9644 !important;
+}
+.vip_rank_pto {
+    color: #E44A9C !important;
+}
+.royal_rank_pto {
+    color: #74b9ff !important;
+}
+.cont_rank_pto {
+    color: #f1c40f !important;
+}
